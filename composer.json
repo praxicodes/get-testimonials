@@ -1,0 +1,22 @@
+{
+    "name": "ep/get-testimonials",
+    "description": "A simple plugin that stores testimonials from website visitors",
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">=7.3"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.10"
+    },
+    "scripts": {
+        "lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+        "lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor .",
+        "make-pot": "wp i18n make-pot . languages/_s.pot"
+    },
+    "license": "GPLv3",
+    "autoload": {
+        "psr-4": {
+            "EP\\GetTestimonials\\": "includes/"
+        }
+    }
+}
