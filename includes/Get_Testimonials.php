@@ -62,7 +62,7 @@ final class Get_Testimonials {
 		if ( ! function_exists( 'get_plugin_data' ) ) {
 			include_once \ABSPATH . 'wp-admin/includes/plugin.php';
 		}
-		$plugin_data = \get_plugin_data( GET_TESTIMONIALS_PATH . 'testimonial-collector.php' );
+		$plugin_data = \get_plugin_data( GET_TESTIMONIALS_PATH . 'get-testimonials.php' );
 
 		$this->plugin_slug    = $plugin_data['TextDomain'];
 		$this->plugin_version = $plugin_data['Version'];
