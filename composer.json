@@ -6,17 +6,23 @@
         "php": ">=7.3"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "^3.10"
+        "wp-coding-standards/wpcs": "^3.0",
+        "phpcompatibility/phpcompatibility-wp": "*"
     },
     "scripts": {
         "lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
         "lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor .",
-        "make-pot": "wp i18n make-pot . languages/_s.pot"
+        "make-pot": "wp i18n make-pot . languages/get-testimonials.pot"
     },
     "license": "GPLv3",
     "autoload": {
         "psr-4": {
-            "EP\\GetTestimonials\\": "includes/"
+            "Get_Testimonials\\": "includes/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     }
 }
